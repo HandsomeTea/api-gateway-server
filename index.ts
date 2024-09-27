@@ -27,10 +27,15 @@ import app from '@/app';
 app.set('port', port);
 const server = http.createServer(app);
 
+import casbin from '@/tools/casbin';
+
 /**
  * 健康检查
  */
 const isHealth = async () => {
+	if (!casbin.isOk) {
+		return log('STARTUP').error('casbin load failed!');
+	}
 	system('SYSTEM-STATUS').debug('health check: system is normal.');
 	return true;
 };
