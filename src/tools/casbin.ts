@@ -1,7 +1,14 @@
 import path from 'path';
 import { Enforcer, newEnforcer } from 'casbin';
 
-export default new class Casbin {
+
+/**
+ * 示例：
+ * casbin.check({ sub: 'alice', obj: 'data1', act: 'read' })
+ * 参考：
+ * https://casbin.org/casbin-editor/#6TQQJ8EQF
+ **/
+export const casbin = new class Casbin {
 	private server!: Enforcer;
 	private status: boolean = false;
 

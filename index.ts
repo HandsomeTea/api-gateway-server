@@ -27,7 +27,7 @@ import app from '@/app';
 app.set('port', port);
 const server = http.createServer(app);
 
-import casbin from '@/tools/casbin';
+import { casbin } from '@/tools/casbin';
 
 /**
  * 健康检查
