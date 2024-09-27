@@ -5,5 +5,5 @@ import { proxyToUserService } from './proxy';
 const proxyServer = proxy.createProxyServer();
 
 export default (req: Request, res: Response, next: NextFunction) => {
-    proxyToUserService(req, res, next, proxyServer);
+	proxyToUserService(req, res, next, proxyServer);
 };

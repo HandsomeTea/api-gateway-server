@@ -16,7 +16,8 @@ module.exports = {
         jest: true
     },
     globals: {
-
+        Exception: true,
+        httpArgument: true
     },
     rules: {
         'prettier/prettier': 'off',
