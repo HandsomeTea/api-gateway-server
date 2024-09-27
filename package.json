@@ -1,0 +1,37 @@
+{
+  "name": "api-gateway-server",
+  "version": "1.0.0",
+  "description": "接口网关服务，用于基本的接口鉴权，资源鉴权，接口转发等",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node-dev --respawn --transpile-only ./index.ts",
+    "build": "./node_modules/.bin/tsc",
+    "eslint": "./node_modules/.bin/eslint ./ --fix",
+    "husky-init": "husky init"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/http-proxy": "^1.17.15",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/module-alias": "^2.0.4",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@godaddy/terminus": "^4.12.1",
+    "agentkeepalive": "^4.5.0",
+    "axios": "^1.7.7",
+    "express": "^4.21.0",
+    "express-async-handler": "^1.2.0",
+    "http-proxy": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "log4js": "^6.9.1",
+    "module-alias": "^2.2.3"
+  }
+}
